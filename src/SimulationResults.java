@@ -5,27 +5,30 @@ public class SimulationResults
     int randomIndex = 1;
     public double getSampleMean(int number)
     {
-        double[] sampleX = new double[number];
-        populateSamples(sampleX);
+        double[] sampleX = populateSamples(number);
         double total = sum(sampleX);
-        System.out.println(total);
+        //System.out.println(total);
         return total/ number;
     }
 
     private double sum(double[] sampleX)
     {
         double total = 0;
-        for(double x : sampleX)
+        for(double x : sampleX) {
+            //System.out.println(x);
             total += x;
+        }
         return total;
     }
-    private void populateSamples(double[] sampleX)
+    private double[] populateSamples(int number)
     {
-        for(double x : sampleX)
+        double[] doubles = new double[number];
+        for(int i = 0; i < number; i++)
         {
-            x = getNextRealization();
+            doubles[i] = getNextRealization();
             //System.out.println(x);
         }
+        return doubles;
     }
 
     private double getNextRealization()
