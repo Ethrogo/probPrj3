@@ -4,7 +4,7 @@ public class Main {
     final static long startX = 1000; //x naught // x sub 0
     final static double modulus = Math.pow(2, 18);    //k
     public static void main(String[] args) {
-        getAnyRandomValues(1, 2, 3);
+        getAnyRandomValues(50, 51, 52);
 
     }
     public static double getAnyX(int i)
